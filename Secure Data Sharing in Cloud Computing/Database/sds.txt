@@ -1,0 +1,95 @@
+create database sds;
+
+use sds;
+
+create table user(
+id int(11) NOT NULL auto_increment,
+
+name text,
+pass text,
+email text,
+mobile text,
+addr text,
+dob text,
+gender text,
+location text,
+imagess longblob,
+PRIMARY KEY  (id)
+);
+
+create table owner(
+id int(11) NOT NULL auto_increment,
+
+name text,
+pass text,
+email text,
+mobile text,
+addr text,
+dob text,
+gender text,
+location text,
+imagess longblob,
+PRIMARY KEY  (id)
+);
+
+create table Transaction(
+id int(11) NOT NULL auto_increment,
+user text,
+fname text,
+task text,
+dt text,
+PRIMARY KEY (id));
+
+create table ownerfiles(
+id int(11) NOT NULL auto_increment,
+
+fname text,
+owner text,
+ct text,
+dt text,
+PRIMARY KEY  (id));
+
+create table cloudserver(
+id int(11) NOT NULL auto_increment,
+
+fname text,
+owner text,
+ct text,
+dt text,
+PRIMARY KEY  (id));
+
+
+CREATE TABLE cloud(
+	user VARCHAR(50),
+	pass VARCHAR(50)
+) ;
+
+insert into cloud values ('cloud','cloud');
+
+
+CREATE TABLE KDC(
+	user VARCHAR(50),
+	pass VARCHAR(50)
+) ;
+
+insert into KDC values ('ka','ka');
+
+
+create table request(
+id int(11) NOT NULL auto_increment,
+
+user text,
+owner text,
+fname text,
+sk text,
+PRIMARY KEY  (id));
+
+
+
+create table Attacker(
+id int(11) NOT NULL auto_increment,
+user text,
+fname text,
+sk text,
+dt text,
+PRIMARY KEY (id));
